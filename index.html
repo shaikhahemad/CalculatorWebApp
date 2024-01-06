@@ -1,623 +1,323 @@
 <!--
-
   This Calculater Created By Ahemad Shaikh
-
 -->
-
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
   <meta name="Calculater" content="Calculater">
-
   <title>Calculater</title>
 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
   <style type="text/css" media="all">
-
     * {
-
       margin: 0;
-
       padding: 0;
-
     }
-
-    body {
-
+    body{
       display: flex;
-
       justify-content: center;
-
       align-items: center;
-
+     
     }
-
     main {
-
       display: flex;
-
       justify-content: center;
-
       align-items: center;
-
       vertical-align: center;
 
     }
-
     .container {
-
       /* display: flex; */
-
       height: 485px;
-
       width: 300px;
-
       border: 2px solid lightgray;
-
       margin: 20px 20px 20px 20px;
-
       justify-content: center;
-
       align-content: center;
-
       align-items: center;
-
       background: black;
-
       border-radius: 24px;
-
       box-shadow: 2px 2px 1.5px 1.5px gray;
-
     }
 
     .row0, .row1, .row2, .row3, .row4 {
-
       display: flex;
-
       align-content: center;
-
       align-items: center;
-
       justify-content: center;
-
     }
-
     #bxclr, #bxdl , #bxmod,#box1, #box3, #box6, #box8, #boxp, #box0, #box2, #box4, #box5, #box7, #box9 {
-
       display: flex;
-
       align-content: center;
-
       align-items: center;
-
       justify-content: center;
-
       height: 50px;
-
       width: 50px;
-
       margin: 5px;
-
       border: 2px solid gray;
-
       background: antiquewhite;
-
       color: dark;
-
       font-size: 24px;
-
       border-radius: 20px;
-
     }
-
     #box1:hover,#box3:hover,#box6:hover,#box8:hover,#boxp:hover,#box0:hover,#box2:hover,#box4:hover,#box5:hover,#box7:hover,#box9:hover {
-
       background: lightgray;
-
       color: black;
-
     }
-
     #boxm:hover, #boxa:hover, #boxs:hover, #boxd:hover, #bxmod:hover {
-
       background: black;
-
       color: white;
-
     }
-
     #field1 {
-
       width: 250px;
-
       height: 90px;
-
       text-align: right;
-
       font-size: 30px;
-
     }
-
     .field {
-
       display: flex;
-
       flex-direction: column;
-
       padding: 2.5px;
-
       width: 250px;
-
       height: 90px;
-
       margin: 10px 25px;
-
       background: lightgray;
-
       border: 2px solid gray;
-
       color: black;
-
     }
-
+   
     #boxa, #boxs, #boxm, #boxd, #boxe {
-
       display: flex;
-
       align-content: center;
-
       align-items: center;
-
       justify-content: center;
-
       height: 55px;
-
       width: 55px;
-
       margin: 5px;
-
       border: 2px solid lightgray;
-
       border-radius: 20px;
-
       background: gray;
-
       color: white;
-
       font-size: 30px;
-
     }
 
     #boxe {
-
       background: green;
-
       color: black;
-
     }
-
     #boxe:hover {
-
       background: lightgreen;
-
     }
-
     #bxclr {
-
       background: red;
-
     }
-
     #bxdl, .det, #del {
-
       overflow: hidden;
-
-      background: white;
-
-      display: flex;
-
-      justify-content: center;
-
-      align-items: center;
-
+      background: black;
     }
-
     #bxdl:hover {
-
       border: 2px solid red;
-
     }
 
     sup {
-
       font-size: 14px;
-
     }
-
     .num {
-
       font-size: 24px;
-
       border: hidden;
-
       background: antiquewhite;
-
     }
-
     .num:hover , .flowh:hover {
-
       background: lightgray;
-
       color: black;
-
     }
-
     .symb {
-
       background: gray;
-
       border: hidden;
-
       color: white;
-
       font-size: 30px;
-
     }
-
     .symb:hover , .sqrt:hover {
-
       background: black;
-
       color: white;
-
     }
-
     .eqs {
-
       background: green;
-
       color: black;
-
       border: hidden;
-
       font-size: 30px;
-
     }
-
     .eqs:hover {
-
       background: lightgreen;
-
     }
-
     button {
-
       border: hidden;
-
     }
-
     .credit {
-
       color: white;
-
       text-shadow: 0.5px 0.5px 10px gray;
-
       border: 0.5px solid gray;
-
       border-radius: 50px;
-
       box-shadow: 0.5px 0.5px 0.5px white;
-
       margin: 0 125px;
-
       opacity: 0.8;
-
     }
-
     .flowc {
-
       font-size: 24px;
-
       background: red;
-
     }
-
     .flowc:hover {
-
       background: white;
-
       color: red;
-
     }
-
     #bxclr:hover {
-
       border: 2px solid  red;
-
       color: red;
-
       background: white;
-
     }
-
     .flowh {
-
       background: antiquewhite;
-
       font-size: 24px;
-
       border-radius: 20px;
-
     }
-
   </style>
-
 </head>
-
 <body>
-
   <main>
-
     <form name="calcul">
-
       <div class="container">
-
         <div class="field">
-
           <input scroll disabled type="text" name="result" id="field1" />
-
         </div>
-
         <div class="credit">
-
           <center>
-
             71
-
           </center>
-
         </div>
-
         <div class="row0">
-
           <div id="bxclr">
-
             <button class="flowc" type="button" value="C" class="clear" onclick="remv()"> C </button>
-
           </div>
-
           <div id="bxmod">
-
             <button class="num sqrt" type="button" value="sqrt2" onclick="sqrt2()"> &radic; </button>
-
           </div>
-
           <div id="bxdl">
-
             <button class="det" type="button" value="BACKSPC" onclick="BACKSPC()">
-
-              <!--<img id="del" src="https://img.icons8.com/fluency/344/clear-symbol.png" alt="" height="60px" width="45px" />-->
-
-              <!-- <i class="fa fa-arrow-left"></i> -->
-
-              <i class="material-icons" style="font-size:40px">backspace</i>
-
+              <img id="del" src="https://img.icons8.com/fluency/344/clear-symbol.png" alt="" height="60px" width="45px" />
             </button>
-
           </div>
-
           <div id="boxd">
-
             <button class="symb" type="button" value="/" onclick="number(value)"> ÷ </button>
-
           </div>
-
         </div>
-
         <div class="row1">
-
           <div id="box1">
-
-            <button class="num" type="button" value="1" onclick="number(value)"> &#10112; </button>
-
+            <button class="num" type="button" value="1" onclick="number(value)"> 1 </button>
           </div>
-
           <div id="box2">
-
             <button class="num" type="button" value="2" onclick="number(value)"> 2 </button>
-
           </div>
-
           <div id="box3">
-
             <button class="num" type="button" value="3" onclick="number(value)"> 3 </button>
-
           </div>
-
           <div id="boxm">
-
             <button class="symb" type="button" value="*" onclick="number(value)"> × </button>
-
           </div>
-
         </div>
-
         <div class="row2">
-
           <div id="box4">
-
             <button class="num" type="button" value="4" onclick="number(value)"> 4 </button>
-
           </div>
-
           <div id="box5">
-
             <button class="num" type="button" value="5" onclick="number(value)"> 5 </button>
-
           </div>
-
           <div id="box6">
-
             <button class="num" type="button" value="6" onclick="number(value)"> 6 </button>
-
           </div>
-
           <div id="boxs">
-
             <button class="symb" type="button" value="-" onclick="number(value)"> - </button>
-
           </div>
 
         </div>
-
         <div class="row3">
-
           <div id="box7">
-
             <button class="num" type="button" value="7" onclick="number(value)"> 7 </button>
-
           </div>
-
           <div id="box8">
-
             <button class="num" type="button" value="8" onclick="number(value)"> 8 </button>
-
           </div>
-
           <div id="box9">
-
             <button class="num" type="button" value="9" onclick="number(value)"> 9 </button>
-
           </div>
-
           <div id="boxa">
-
             <button class="symb" type="button" value="+" onclick="number(value)"> + </button>
-
           </div>
-
         </div>
-
         <div class="row4">
-
           <div id="boxp">
-
             <button class="num" type="button" value="." onclick="number(value)"> . </button>
-
           </div>
-
           <div id="box0">
-
             <button class="num" type="button" value="0" onclick="number(value)"> 0 </button>
-
           </div>
-
           <div id="boxp">
-
             <p>
-
               <button class="flowh" type="button" value="x^2" onclick="square()"> x<sup>2 </button>
-
               </p>
-
             </div>
-
             <div id="boxe">
-
               <button class="eqs" type="button" value="=" onclick="equal()" class="equal">=</button>
-
             </div>
-
           </div>
-
         </div>
-
       </form>
-
     </main>
-
   </body>
-
   <script type="text/javascript" charset="utf-8">
-
     function sin() {
-
       document.calcul.result.value = Math.sin(document.calcul.result.value);
-
     }
 
-    // 	function cos(){    // 	document.calcul.result.value=Math.cos(document.calcul.result.value);
-
+    // 	function cos(){
+    // 	document.calcul.result.value=Math.cos(document.calcul.result.value);
     // 	}
 
     // 	function tan(){
-
     // 	document.calcul.result.value=Math.tan(document.calcul.result.value);
-
     // 	}
 
     function BACKSPC() {
-
       var a = document.calcul.result.value;
-
       document.calcul.result.value = a.substr(0, a.length-1);
-
     }
 
     function square() {
-
       document.calcul.result.value = Math.pow(document.calcul.result.value, 2);
-
     }
 
     // 	function cubed(){
-
     // 	document.calcul.result.value = Math.pow(document.calcul.result.value, 3);
-
     // 	}
 
     function sqrt2() {
-
       document.calcul.result.value = Math.pow(document.calcul.result.value, 1/2);
-
     }
 
     // 	function sqrt3(){
-
     // 	document.calcul.result.value = Math.pow(document.calcul.result.value, 1/3);
-
     // 	}
 
     function number(value) {
-
       document.calcul.result.value += value;
-
     }
 
     function remv() {
-
       document.calcul.result.value = " ";
-
     }
 
     function equal() {
-
       document.calcul.result.value = eval(document.calcul.result.value);
-
     }
 
   </script>
-
 </html>
